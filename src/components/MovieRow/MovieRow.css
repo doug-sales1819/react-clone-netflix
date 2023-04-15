@@ -1,10 +1,13 @@
 .rowHeader {
-  margin-top: 58px;
+  padding: 2px;
   height: 61px;
 }
 
 .rowHeader-title {
-  margin: 17px 0 0 60px;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  margin-left: 60px;
   width: fit-content;
 }
 
@@ -29,6 +32,7 @@
   align-items: center;
   cursor: grab;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  user-select: none;
 }
 
 .swiper-slide img {
@@ -37,13 +41,33 @@
   object-fit: cover;
   object-position: center center;
   border-radius: 4px;
+  transform: scale(0.97);
+  transition: all 0.3s ease;
 }
 
-.mySwiper {
+.swiper-slide img:hover {
+  transform: scale(1);
+}
+
+.swiper-movies {
   height: 300px;
   width: 100%;
 }
 
 :is(.swiper-button-next, .swiper-button-prev) {
   color: white;
+  transform: scale(0.65);
+  transition: all 0.2s ease;
+}
+
+:is(.swiper-button-next, .swiper-button-prev):hover {
+  transform: scale(0.80);
+}
+
+.swiper-button-next {
+  margin-right: 10px;
+}
+
+.swiper-button-prev {
+  margin-left: 10px;
 }

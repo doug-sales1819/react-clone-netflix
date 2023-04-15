@@ -1,0 +1,111 @@
+.featured {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85vh;
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+}
+
+.featured--vertical {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, #141414 10%, transparent 90%);
+}
+
+.featured--horizontal {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to right, #1414148d 30%, transparent);
+}
+
+.featured-content {
+  position: absolute;
+  top: calc(50% - 25%);
+  margin-left: 5rem;
+  width: 685px;
+}
+
+.featured--name {
+  font-size: 85px;
+  font-weight: bold;
+}
+
+.featured--info {
+  width: fit-content;
+  display: flex;
+  gap: 1.2rem;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.featured--points {
+  color: #46d369;
+}
+
+.featured-year {
+  display: inline-block;
+}
+
+.featured--seasons {
+  display: inline-block;
+}
+
+.featured--description {
+  width: 100%;
+  font-size: 23.04px;
+  margin-top: 21px;
+  color: #fff;
+  text-align: start;
+}
+
+.featured--buttons {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 23.4px;
+}
+
+.featured-genres {
+  margin-top: 2rem;
+  font-size: 20px;
+}
+
+.play-btn {
+  font-weight: bold;
+  width: 192px;
+  padding: 11px 34px 11px 24px;
+  background-color: #fff;
+  color: #141414;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.my-list-btn {
+  font-weight: bold;
+  padding: 11px 34px 11px 24px;
+  background-color: #6d6d6e;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.my-list-btn:hover {
+  background-color: #6d6d6e62;
+  transform: scale(1.02);
+}
+
+.play-btn:hover {
+  transform: scale(1.02);
+  background-color: #ffffffde;
+}

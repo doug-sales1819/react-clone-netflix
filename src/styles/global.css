@@ -1,7 +1,8 @@
-@font-face {
-  font-family: 'Roboto';
-  src: url(../assets/fonts/Roboto/Roboto-Medium.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   padding: 0;
@@ -9,6 +10,7 @@
   box-sizing: border-box;
   outline: none;
   border: none;
+  text-decoration: none;
 }
 
 body {

@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, EffectFade } from "swiper";
+import { Navigation, FreeMode } from "swiper";
 
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
-import 'swiper/css/effect-fade'
 
 import './MovieRow.css';
 
@@ -21,17 +20,26 @@ const MovieRow = ({ title, items }) => {
 
       <div className="movieRow--listArea">
         <Swiper 
+          rewind={true}
+          freeMode={
+            {
+              enabled: true,
+              sticky: true,
+              momentumVelocityRatio: 1,
+            }
+          }
           navigation={true}
           loop={true}
-          fadeEffect={true}
-          spaceBetween={10}
           slidesPerView={8}
-          modules={[Navigation, EffectFade]} 
-          className="mySwiper"
+          modules={[Navigation, FreeMode]} 
+          className="swiper-movies"
         >
         {items.results.length > 0 && items.results.map((item, key) => (
           <SwiperSlide key={key}>
-            <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title} />
+            <img 
+            src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} 
+            alt={item.original_title} 
+          />
           </SwiperSlide>
         ))}
         </Swiper>
